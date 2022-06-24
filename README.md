@@ -15,7 +15,7 @@ Proof of Work (PoW) bekerja dengan VEXANIUM Blockchain. Penambangan CPU pada VEX
 
 Gunakan VEX Anda sebagai penambang cryptocurrency blockchain selamanya. VEX tidak memerlukan daya atau peningkatan untuk tetap kompetitif melawan penambang lain di VEX. Inflasi di VEX adalah biaya perawatan, listrik, dan peningkatan Anda. Gunakan VEX Anda secara maksimal alih-alih membiarkannya sia-sia.
 
-
+*Setiap pemambangan memerlukan 5 VEX.
 
 [1] BITVEXA. Anda dapat mendukung pengembangan BTV lebih lanjut dengan mendonasikan BTV | VEX | BTC ke Bitvexa. Sumbangan untuk Bitvexa menghargai upaya tim dan mendorong pengembangan baru sambil menjaga distribusi BTV tetap adil, terdesentralisasi, dan sesuai dengan semangat Bitcoin.
 
