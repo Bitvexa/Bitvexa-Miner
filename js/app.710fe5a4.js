@@ -654,8 +654,8 @@
                                     }],
                                     data: {
                                         from: this.currentAccount,
-                                        to: "bitvexatoken",
-                                        quantity: "0.0001 VEX",
+                                        to: "vexadevcores",
+                                        quantity: "5.0000 VEX",
                                         memo: ""
                                     }
                                 }]
