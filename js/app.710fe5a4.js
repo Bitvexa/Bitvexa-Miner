@@ -655,7 +655,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "vexadevcores",
-                                        quantity: "5.0000 VEX",
+                                        quantity: "1.0000 VEX",
                                         memo: ""
                                     }
                                 }]
@@ -806,7 +806,7 @@
                     contractRamTip: "Jika RAM kontrak habis, pengguna baru tidak bisa mendapatkan token",
                     ram: "RAM",
                     digTip: "Diharapkan per transfer",
-                    whiteTip: "*Harap daftar putih tindakan ini dan periksa penggunaan sumber daya untuk melihat apakah itu normal",
+                    whiteTip: "*Harap daftar putih tindakan ini dan periksa penggunaan sumber daya untuk melihat apakah itu normal dan setiap penambangan membutuhkan 1.0000 VEX.",
                     airgrabTip: "Kirim berapa pun jumlah VEX ke bitvexatoken, VEX akan langsung dikembalikan dan Anda akan menambang 0,0025% dari saldo BTV bitvexatoken.",
                     enableAuto: "Transfer Otomatis",
                     stopAuto: "Berhenti Otomatis",
