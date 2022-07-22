@@ -234,19 +234,19 @@
                     },
                     on: {
                         click: function(e) {
-                            return t.changeLang("id")
+                            return t.changeLang("en")
                         }
                     }
-                }, [t._v("ID")]) : n("a", {
+                }, [t._v("EN")]) : n("a", {
                     attrs: {
                         href: "javascript:;"
                     },
                     on: {
                         click: function(e) {
-                            return t.changeLang("en")
+                            return t.changeLang("zh")
                         }
                     }
-                }, [t._v("EN")])])]), n("h5", {
+                }, [t._v("ID")])])]), n("h5", {
                     staticClass: "mb-3 font-weight-normal"
                 }), n("div", {
                     staticClass: "mb-2 text-left"
@@ -274,13 +274,13 @@
                     staticClass: "mb-2 text-left"
                 }, [n("label", {}, [t._v("\n        BTV " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.btvBalance) + "\n        "), t.isMobile ? n("a", {
                     attrs: {
-                        href: "https://",
-                        target: "_blank"
+                        href: "https://vexswap.org/market/675",
+                        target: ""
                     }
                 }, [t._v(t._s(t.$t("i18nView.trade")))]) : n("a", {
                     attrs: {
-                        href: "https://",
-                        target: "_blank"
+                        href: "https://vexswap.org/market/675",
+                        target: ""
                     }
                 }, [t._v(t._s(t.$t("i18nView.trade")))])])]), n("div", {
                     staticClass: "mb-2 text-left"
@@ -288,7 +288,7 @@
                     staticClass: "error"
                 }, [t._v(t._s(t.$t("i18nView.notEnough")))]) : t._e(), n("a", {
                     attrs: {
-                        target: "_blank",
+                        target: "",
                         href: "https://vexrex.net/"
                     }
                 }, [t._v("REX " + t._s(t.$t("i18nView.rent")))])])]), n("div", {
@@ -318,7 +318,7 @@
                             return t.startAuto()
                         }
                     }
-                }, [t._v(t._s(t.$t("i18nView.enableAuto")) + " 2.0000 VEX")])]), !t.isFirstTime && t.isAuto ? n("div", {
+                }, [t._v(t._s(t.$t("i18nView.enableAuto")) + " 5.0000 VEX")])]), !t.isFirstTime && t.isAuto ? n("div", {
                     staticClass: "checkbox mb-3 text-right"
                 }, [n("label", [n("input", {
                     attrs: {
@@ -603,7 +603,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "2.0000 VEX",
+                                        quantity: "5.0000 VEX",
                                         memo: ""
                                     }
                                 }, {
@@ -616,7 +616,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "2.0000 VEX",
+                                        quantity: "5.0000 VEX",
                                         memo: ""
                                     }
                                 }, {
@@ -629,7 +629,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "2.0000 VEX",
+                                        quantity: "5.0000 VEX",
                                         memo: ""
                                     }
                                 }, {
@@ -642,7 +642,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "2.0000 VEX",
+                                        quantity: "5.0000 VEX",
                                         memo: ""
                                     }
                                 }, {
@@ -655,7 +655,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "2.0000 VEX",
+                                        quantity: "5.0000 VEX",
                                         memo: ""
                                     }
                                 }]
@@ -768,28 +768,28 @@
                     logout: "Logout",
                     contract: "Contract",
                     used: "Used",
-                    rent: "Rent",
-                    contractRamTip: "If contract's RAM is run out, new users can't get the token",
+                    rent: "Sewa",
+                    contractRamTip: "Jika RAM kontrak habis, pengguna baru tidak bisa mendapatkan token",
                     ram: "RAM",
-                    digTip: "Expected per transfer",
-                    whiteTip: "Please whitelist this action and have a check on the usage of resources to see whether is it normal.",
-                    airgrabTip: "Send any amount of VEX to bitvexatoken, and you will mine 0.0025% of the BTV balance of bitvexatoken",
-                    enableAuto: "Automatic Transfer",
-                    stopAuto: "Stop Automatic",
+                    digTip: "Diharapkan per transfer",
+                    whiteTip: "*Harap daftar putih tindakan ini dan periksa penggunaan sumber daya untuk melihat apakah itu normal",
+                    airgrabTip: "Kirim minimum 5.0000 VEX atau berapa pun jumlah VEX ke bitvexatoken, Vex akan di Refund dan terpotong 1.5% untuk fee, Anda akan menambang 0,0025% dari saldo BTV bitvexatoken",
+                    enableAuto: "Transfer Otomatis",
+                    stopAuto: "Berhenti Otomatis",
                     btvTitle: "Auto Miner",
                     error: "Error: ",
-                    trade: "Trade",
-                    fastMode: "Ultra-Fast Mode(Whitelist required)",
-                    digTime: "Mining times",
+                    trade: "Add Liquidity",
+                    fastMode: "Mode Ultra-Cepat (Diperlukan Daftar Putih)",
+                    digTime: "Waktu penambangan",
                     changeNode: "Change Node",
-                    diggingSetting: "When the expected per transfer is greater than",
-                    diggingSetting1: "start transfer",
-                    cpuTips: "It will failed when your CPU & NET is exceeds 100%",
-                    settingTips: "There will be errors cause of the fluctuation of CPU and timing",
-                    advSetting: "Settings",
-                    cpuQuota: "CPU Quota ",
-                    cpuQuotaTip: "(Stop mining when the quota is reached, 0 is unlimited by default)",
-                    notEnough: "Insufficient "
+                    diggingSetting: "Ketika diharapkan per transfer lebih besar dari ",
+                    diggingSetting1: "mulai transfer",
+                    cpuTips: "Ini akan gagal ketika CPU & NET Anda melebihi 100%",
+                    settingTips: "Akan ada kesalahan penyebab fluktuasi CPU dan waktu",
+                    advSetting: "Pengaturan",
+                    cpuQuota: "Kuota CPU ",
+                    cpuQuotaTip: "(Hentikan penambangan ketika kuota tercapai, 0 tidak terbatas secara default)",
+                    notEnough: "Tidak memadai "
                 }
             },
             B = Q,
@@ -802,28 +802,28 @@
                     logout: "Logout",
                     contract: "Contract",
                     used: "Used",
-                    rent: "Sewa",
-                    contractRamTip: "Jika RAM kontrak habis, pengguna baru tidak bisa mendapatkan token",
+                    rent: "Rent",
+                    contractRamTip: "If contract's RAM is run out, new users can't get the token",
                     ram: "RAM",
-                    digTip: "Diharapkan per transfer",
-                    whiteTip: "*Harap daftar putih tindakan ini dan periksa penggunaan sumber daya untuk melihat apakah itu normal dan setiap penambangan membutuhkan VEX.",
-                    airgrabTip: "Kirim berapa pun jumlah VEX ke bitvexatoken, VEX akan di refund terpotong fee 15% dan Anda akan menambang 0,0025% dari saldo BTV bitvexatoken.",
-                    enableAuto: "Transfer Otomatis",
-                    stopAuto: "Berhenti Otomatis",
+                    digTip: "Expected per transfer",
+                    whiteTip: "Please whitelist this action and have a check on the usage of resources to see whether is it normal.",
+                    airgrabTip: "Send a minimum of 5.000 VEX or any amount of VEX to bitvexatoken, Vex will be refunded and 1.5% will be deducted from the fee, you will mine 0.0025% of the bitvexatoken BTV balance",
+                    enableAuto: "Automatic Transfer",
+                    stopAuto: "Stop Automatic",
                     btvTitle: "Auto Miner",
                     error: "Error: ",
-                    trade: "Trade",
-                    fastMode: "Mode Ultra-Cepat (Diperlukan Daftar Putih)",
-                    digTime: "Waktu penambangan",
+                    trade: "Add Liquidity",
+                    fastMode: "Ultra-Fast Mode(Whitelist required)",
+                    digTime: "Mining times",
                     changeNode: "Change Node",
-                    diggingSetting: "Ketika diharapkan per transfer lebih besar dari ",
-                    diggingSetting1: "mulai transfer",
-                    cpuTips: "Ini akan gagal ketika CPU & NET Anda melebihi 100%",
-                    settingTips: "Akan ada kesalahan penyebab fluktuasi CPU dan waktu",
-                    advSetting: "Pengaturan",
-                    cpuQuota: "Kuota CPU ",
-                    cpuQuotaTip: "(Hentikan penambangan ketika kuota tercapai, 0 tidak terbatas secara default)",
-                    notEnough: "Tidak memadai "
+                    diggingSetting: "When the expected per transfer is greater than",
+                    diggingSetting1: "start transfer",
+                    cpuTips: "It will failed when your CPU & NET is exceeds 100%",
+                    settingTips: "There will be errors cause of the fluctuation of CPU and timing",
+                    advSetting: "Settings",
+                    cpuQuota: "CPU Quota ",
+                    cpuQuotaTip: "(Stop mining when the quota is reached, 0 is unlimited by default)",
+                    notEnough: "Insufficient "
                 }
             },
             z = N;
