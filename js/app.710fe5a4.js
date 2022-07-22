@@ -318,7 +318,7 @@
                             return t.startAuto()
                         }
                     }
-                }, [t._v(t._s(t.$t("i18nView.enableAuto")) + " 1.0000 VEX")])]), !t.isFirstTime && t.isAuto ? n("div", {
+                }, [t._v(t._s(t.$t("i18nView.enableAuto")) + " 2.0000 VEX")])]), !t.isFirstTime && t.isAuto ? n("div", {
                     staticClass: "checkbox mb-3 text-right"
                 }, [n("label", [n("input", {
                     attrs: {
@@ -603,7 +603,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "0.0001 VEX",
+                                        quantity: "2.0000 VEX",
                                         memo: ""
                                     }
                                 }, {
@@ -616,7 +616,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "1.0000 VEX",
+                                        quantity: "2.0000 VEX",
                                         memo: ""
                                     }
                                 }, {
@@ -629,7 +629,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "1.0000 VEX",
+                                        quantity: "2.0000 VEX",
                                         memo: ""
                                     }
                                 }, {
@@ -642,7 +642,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "1.0000 VEX",
+                                        quantity: "2.0000 VEX",
                                         memo: ""
                                     }
                                 }, {
@@ -655,7 +655,7 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "1.0000 VEX",
+                                        quantity: "2.0000 VEX",
                                         memo: ""
                                     }
                                 }]
@@ -807,7 +807,7 @@
                     ram: "RAM",
                     digTip: "Diharapkan per transfer",
                     whiteTip: "*Harap daftar putih tindakan ini dan periksa penggunaan sumber daya untuk melihat apakah itu normal dan setiap penambangan membutuhkan VEX.",
-                    airgrabTip: "Kirim berapa pun jumlah VEX ke bitvexatoken, dan Anda akan menambang 0,0025% dari saldo BTV bitvexatoken.",
+                    airgrabTip: "Kirim berapa pun jumlah VEX ke bitvexatoken, VEX akan di refund terpotong fee 15% dan Anda akan menambang 0,0025% dari saldo BTV bitvexatoken.",
                     enableAuto: "Transfer Otomatis",
                     stopAuto: "Berhenti Otomatis",
                     btvTitle: "Auto Miner",
