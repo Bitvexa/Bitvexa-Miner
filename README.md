@@ -17,7 +17,9 @@ Gunakan VEX Anda sebagai penambang cryptocurrency blockchain selamanya. VEX tida
 
 
 S&K
+
 Fee = 1.5%
+
 Minimum is 5.0000 VEX
 
 [1] BITVEXA. Anda dapat mendukung pengembangan BTV lebih lanjut dengan mendonasikan BTV | VEX | BTC ke Bitvexa. Sumbangan untuk Bitvexa menghargai upaya tim dan mendorong pengembangan baru sambil menjaga distribusi BTV tetap adil, terdesentralisasi, dan sesuai dengan semangat Bitcoin.
