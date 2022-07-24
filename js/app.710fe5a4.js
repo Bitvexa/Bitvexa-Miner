@@ -335,7 +335,7 @@
                     staticClass: "btn mb-3 btn-danger btn-block",
                     on: {
                         click: function(e) {
-                            return t.stop()
+                            return t.stopVx()
                         }
                     }
                 }, [t._v(t._s(t.$t("i18nView.stopAutoVx")))]) : n("button", {
@@ -653,62 +653,10 @@
                                         quantity: "5.0000 VEX",
                                         memo: ""
                                     }
-                                }, {
-                                    account: "vex.token",
-                                    name: "transfer",
-                                    authorization: [{
-                                        actor: this.currentAccount,
-                                        permission: this.currentPermission
-                                    }],
-                                    data: {
-                                        from: this.currentAccount,
-                                        to: "bitvexatoken",
-                                        quantity: "5.0000 VEX",
-                                        memo: ""
-                                    }
-                                }, {
-                                    account: "vex.token",
-                                    name: "transfer",
-                                    authorization: [{
-                                        actor: this.currentAccount,
-                                        permission: this.currentPermission
-                                    }],
-                                    data: {
-                                        from: this.currentAccount,
-                                        to: "bitvexatoken",
-                                        quantity: "5.0000 VEX",
-                                        memo: ""
-                                    }
-                                }, {
-                                    account: "vex.token",
-                                    name: "transfer",
-                                    authorization: [{
-                                        actor: this.currentAccount,
-                                        permission: this.currentPermission
-                                    }],
-                                    data: {
-                                        from: this.currentAccount,
-                                        to: "bitvexatoken",
-                                        quantity: "5.0000 VEX",
-                                        memo: ""
-                                    }
-                                }, {
-                                    account: "vex.token",
-                                    name: "transfer",
-                                    authorization: [{
-                                        actor: this.currentAccount,
-                                        permission: this.currentPermission
-                                    }],
-                                    data: {
-                                        from: this.currentAccount,
-                                        to: "bitvexatoken",
-                                        quantity: "5.0000 VEX",
-                                        memo: ""
-                                    }
                                 }]
                             }).then(function(t) {
                                 e.isFirstTime = !1,
-                                    e.digCount = e.digCount + 5,
+                                    e.digCount = e.digCount + 1,
                                     localStorage.setItem("dig-count", e.digCount),
                                     e.isAuto && !e.isFast && e.transfer("start")
                             }).catch(function(t) {
@@ -739,62 +687,10 @@
                                         quantity: "5000.0000 VX",
                                         memo: ""
                                     }
-                                }, {
-                                    account: "vexwrap.exy",
-                                    name: "transfer",
-                                    authorization: [{
-                                        actor: this.currentAccount,
-                                        permission: this.currentPermission
-                                    }],
-                                    data: {
-                                        from: this.currentAccount,
-                                        to: "bitvexatoken",
-                                        quantity: "5000.0000 VX",
-                                        memo: ""
-                                    }
-                                }, {
-                                    account: "vexwrap.exy",
-                                    name: "transfer",
-                                    authorization: [{
-                                        actor: this.currentAccount,
-                                        permission: this.currentPermission
-                                    }],
-                                    data: {
-                                        from: this.currentAccount,
-                                        to: "bitvexatoken",
-                                        quantity: "5000.0000 VX",
-                                        memo: ""
-                                    }
-                                }, {
-                                    account: "vexwrap.exy",
-                                    name: "transfer",
-                                    authorization: [{
-                                        actor: this.currentAccount,
-                                        permission: this.currentPermission
-                                    }],
-                                    data: {
-                                        from: this.currentAccount,
-                                        to: "bitvexatoken",
-                                        quantity: "5000.0000 VX",
-                                        memo: ""
-                                    }
-                                }, {
-                                    account: "vexwrap.exy",
-                                    name: "transfer",
-                                    authorization: [{
-                                        actor: this.currentAccount,
-                                        permission: this.currentPermission
-                                    }],
-                                    data: {
-                                        from: this.currentAccount,
-                                        to: "bitvexatoken",
-                                        quantity: "5000.0000 VX",
-                                        memo: ""
-                                    }
                                 }]
                             }).then(function(t) {
                                 e.isFirstTimeVx = !1,
-                                    e.digCount = e.digCount + 5,
+                                    e.digCount = e.digCount + 1,
                                     localStorage.setItem("dig-count", e.digCount),
                                     e.isAutoVx && !e.isFastVx && e.transferVx("start")
                             }).catch(function(t) {
@@ -833,6 +729,10 @@
                     },
                     stop: function() {
                         this.isAuto = !1,
+                        this.isAutoVx = !1,
+                            clearInterval(this.fastTimer)
+                    },
+                    stopVx: function() {
                         this.isAutoVx = !1,
                             clearInterval(this.fastTimer)
                     },
