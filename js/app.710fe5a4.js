@@ -272,6 +272,8 @@
                     staticClass: "mb-2 text-left"
                 }, [n("label", {}, [t._v("VEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vexBalance))])]), n("div", {
                     staticClass: "mb-2 text-left"
+                }, [n("label", {}, [t._v("VX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vxBalance))])]), n("div", {
+                    staticClass: "mb-2 text-left"
                 }, [n("label", {}, [t._v("\n        BTV " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.btvBalance) + "\n        "), t.isMobile ? n("a", {
                     attrs: {
                         href: "https://vexswap.org/market/675",
@@ -328,6 +330,34 @@
                     },
                     on: {
                         click: t.handleFast
+                    }
+                }), t._v("\n        " + t._s(t.$t("i18nView.fastMode")) + "\n      ")])]) : n("div", [t.isAutoVx ? n("button", {
+                    staticClass: "btn mb-3 btn-danger btn-block",
+                    on: {
+                        click: function(e) {
+                            return t.stop()
+                        }
+                    }
+                }, [t._v(t._s(t.$t("i18nView.stopAutoVx")))]) : n("button", {
+                    staticClass: "btn mb-3 btn-primary btn-block",
+                    attrs: {
+                        type: "button"
+                    },
+                    on: {
+                        click: function(e) {
+                            return t.startAutoVx()
+                        }
+                    }
+                }, [t._v(t._s(t.$t("i18nView.enableAutoVx")) + " 5000.0000 VX")])]), !t.isFirstTimeVx && t.isAutoVx ? n("div", {
+                    staticClass: "checkbox mb-3 text-right"
+                }, [n("label", [n("input", {
+                    attrs: {
+                        id: "fast-switch",
+                        type: "checkbox",
+                        value: "gogogo"
+                    },
+                    on: {
+                        click: t.handleFastVx
                     }
                 }), t._v("\n        " + t._s(t.$t("i18nView.fastMode")) + "\n      ")])]) : t._e(), n("div", {
                     staticClass: "settings"
@@ -475,9 +505,12 @@
                         currentPermission: null,
                         readOnlyEos: null,
                         isFirstTime: !0,
+                        isFirstTimeVx: !0,
                         vexBalance: "",
+                        vxBalance: "",
                         btvBalance: "",
                         isAuto: !1,
+                        isAutoVx: !1,
                         cpuLeft: "",
                         cpuMS: 100,
                         netLeft: "",
@@ -487,6 +520,7 @@
                         predictAmount: "",
                         msg: "",
                         isFast: !1,
+                        isFastVx: !1,
                         digCount: 0,
                         currentEndpoint: "",
                         isMyKey: !1,
@@ -541,15 +575,24 @@
                                 e.transfer()
                             }, 1e3) : clearInterval(this.fastTimer)
                     },
+                    handleFastVx: function(t) {
+                        var e = this;
+                        this.isFastVx = t.target.checked,
+                            this.isFastVx ? this.fastTimer = setInterval(function() {
+                                e.transferVx()
+                            }, 1e3) : clearInterval(this.fastTimer)
+                    },
                     logout: function() {
                         this.scatter.forgetIdentity(),
                             this.isAuto = !1,
+                            this.isAutoVx = !1,
                             this.currentAccount = "",
                             this.currentPermission = "",
                             this.cpuLeft = "",
                             this.netLeft = "",
                             this.btvBalance = "",
                             this.vexBalance = "",
+                            this.vxBalance = "",
                             this.cpuMS = 100
                     },
                     updateNode: function() {
@@ -581,6 +624,10 @@
                     startAuto: function() {
                         this.isAuto = !0,
                             this.transfer("start")
+                    },
+                    startAutoVx: function() {
+                        this.isAutoVx = !0,
+                            this.transferVx("start")
                     },
                     recordCpuQuota: function() {
                         localStorage.setItem("cpu-quota", this.cpuQuota)
@@ -671,15 +718,101 @@
                             })
                         }
                     },
+                    transferVx: function(t) {
+                        var e = this;
+                        if (this.currentAccount) {
+                            if (parseFloat(this.predictAmount) < parseFloat(this.settingAmount) || 0 !== +this.cpuQuota && parseFloat(this.cpuLeft) > parseFloat(this.cpuQuota))
+                                return void("start" === t && setTimeout(function() {
+                                    e.transferVx("start")
+                                }, 5e3));
+                            E.transaction({
+                                actions: [{
+                                    account: "vexwrap.exy",
+                                    name: "transfer",
+                                    authorization: [{
+                                        actor: this.currentAccount,
+                                        permission: this.currentPermission
+                                    }],
+                                    data: {
+                                        from: this.currentAccount,
+                                        to: "bitvexatoken",
+                                        quantity: "5000.0000 VX",
+                                        memo: ""
+                                    }
+                                }, {
+                                    account: "vexwrap.exy",
+                                    name: "transfer",
+                                    authorization: [{
+                                        actor: this.currentAccount,
+                                        permission: this.currentPermission
+                                    }],
+                                    data: {
+                                        from: this.currentAccount,
+                                        to: "bitvexatoken",
+                                        quantity: "5000.0000 VX",
+                                        memo: ""
+                                    }
+                                }, {
+                                    account: "vexwrap.exy",
+                                    name: "transfer",
+                                    authorization: [{
+                                        actor: this.currentAccount,
+                                        permission: this.currentPermission
+                                    }],
+                                    data: {
+                                        from: this.currentAccount,
+                                        to: "bitvexatoken",
+                                        quantity: "5000.0000 VX",
+                                        memo: ""
+                                    }
+                                }, {
+                                    account: "vexwrap.exy",
+                                    name: "transfer",
+                                    authorization: [{
+                                        actor: this.currentAccount,
+                                        permission: this.currentPermission
+                                    }],
+                                    data: {
+                                        from: this.currentAccount,
+                                        to: "bitvexatoken",
+                                        quantity: "5000.0000 VX",
+                                        memo: ""
+                                    }
+                                }, {
+                                    account: "vexwrap.exy",
+                                    name: "transfer",
+                                    authorization: [{
+                                        actor: this.currentAccount,
+                                        permission: this.currentPermission
+                                    }],
+                                    data: {
+                                        from: this.currentAccount,
+                                        to: "bitvexatoken",
+                                        quantity: "5000.0000 VX",
+                                        memo: ""
+                                    }
+                                }]
+                            }).then(function(t) {
+                                e.isFirstTimeVx = !1,
+                                    e.digCount = e.digCount + 5,
+                                    localStorage.setItem("dig-count", e.digCount),
+                                    e.isAutoVx && !e.isFastVx && e.transferVx("start")
+                            }).catch(function(t) {
+                                e.isAutoVx && !e.isFastVx && setTimeout(function() {
+                                    e.transferVx("start")
+                                }, 5e3)
+                            })
+                        }
+                    },
                     queryBalanceInit: function() {
                         var t = this;
                         this.currentAccount && (this.balanceTimer || (this.queryBalance(),
-                            this.queryState(),
+                            this.queryState(), this.queryStateVx(),
                             this.balanceTimer = setInterval(function() {
                                 t.queryBalance()
                             }, 2e3),
                             this.stateTimer = setInterval(function() {
-                                t.queryState()
+                                t.queryState(), t.queryStateVx()
                             }, 1e4)))
                     },
                     handleError: function(t) {
@@ -700,12 +833,25 @@
                     },
                     stop: function() {
                         this.isAuto = !1,
+                        this.isAutoVx = !1,
                             clearInterval(this.fastTimer)
                     },
+                    
                     queryState: function() {
                         var t = this;
                         this.currentAccount && (this.readOnlyEos.getCurrencyBalance("vex.token", this.currentAccount, "VEX").then(function(e) {
                                 t.vexBalance = e[0]
+                            }),
+                            this.readOnlyEos.getAccount(this.currentAccount).then(function(e) {
+                                t.cpuLeft = parseFloat(e.cpu_limit.used / e.cpu_limit.max * 100).toFixed(2) + "%",
+                                    t.cpuMS = e.cpu_limit.available / 1e3,
+                                    t.netLeft = parseFloat(e.net_limit.used / e.net_limit.max * 100).toFixed(2) + "%"
+                            }))
+                    },
+                    queryStateVx: function() {
+                        var t = this;
+                        this.currentAccount && (this.readOnlyEos.getCurrencyBalance("vexwrap.exy", this.currentAccount, "VX").then(function(e) {
+                                t.vxBalance = e[0]
                             }),
                             this.readOnlyEos.getAccount(this.currentAccount).then(function(e) {
                                 t.cpuLeft = parseFloat(e.cpu_limit.used / e.cpu_limit.max * 100).toFixed(2) + "%",
@@ -774,8 +920,10 @@
                     digTip: "Diharapkan per transfer",
                     whiteTip: "*Harap daftar putih tindakan ini dan periksa penggunaan sumber daya untuk melihat apakah itu normal",
                     airgrabTip: "Kirim minimum 5.0000 VEX atau berapa pun jumlah VEX ke bitvexatoken, Vex akan di Refund dan terpotong 1.5% untuk fee, Anda akan menambang 0,0025% dari saldo BTV bitvexatoken",
-                    enableAuto: "Transfer Otomatis",
-                    stopAuto: "Berhenti Otomatis",
+                    enableAuto: "Mining with VEX Fee 1.5% requires",
+                    enableAutoVx: "Mining with VX no Fees requires",
+                    stopAuto: "Stop Mining with VEX",
+                    stopAutoVx: "Stop Mining with VX",
                     btvTitle: "Auto Miner",
                     error: "Error: ",
                     trade: "Add Liquidity",
@@ -808,8 +956,10 @@
                     digTip: "Expected per transfer",
                     whiteTip: "Please whitelist this action and have a check on the usage of resources to see whether is it normal.",
                     airgrabTip: "Send a minimum of 5.000 VEX or any amount of VEX to bitvexatoken, Vex will be refunded and 1.5% will be deducted from the fee, you will mine 0.0025% of the bitvexatoken BTV balance",
-                    enableAuto: "Automatic Transfer",
-                    stopAuto: "Stop Automatic",
+                    enableAuto: "Mining with VEX Fee 1.5% requires",
+                    enableAutoVx: "Mining with VX no Fees requires",
+                    stopAuto: "Stop Mining with VEX",
+                    stopAutoVx: "Stop Mining with VX",
                     btvTitle: "Auto Miner",
                     error: "Error: ",
                     trade: "Add Liquidity",
