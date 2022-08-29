@@ -3,7 +3,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: #d1d0d0;
+    background-color: #000000;
     width: 100%
 }
 
@@ -17,7 +18,7 @@
 }
 
 #nav a.router-link-exact-active {
-    color: #42b983
+    color: #5f5f5f
 }
 
 h3 {
@@ -35,11 +36,31 @@ li {
 }
 
 a {
-    color: #42b983
+    color: #1eac94
 }
 
-.pow-logo {
-    height: 30px
+button {
+    border-radius: 6px;
+    padding: 0 12px;
+    border: none;
+    margin-bottom: 5rem;
+}
+
+.node {
+    border-radius: 6px;
+    padding: 0 12px;
+    border: none;
+    margin-bottom: -5rem;
+}
+
+.btv-logo {
+    height: 30px;
+    padding: 0 16px;
+}
+
+.btvblnc {
+    color: #c82333;
+    font-size: 24px;
 }
 
 label {
@@ -51,7 +72,7 @@ label {
     display: inline-block
 }
 
-.pow-logo,
+.btv-logo,
 .ver-algin {
     vertical-align: middle
 }
@@ -63,7 +84,7 @@ h1 {
 
 .small-tip {
     font-size: 12px;
-    color: #999;
+    color: rgb(250, 0, 0);
     text-align: left
 }
 
@@ -74,12 +95,85 @@ h1 {
 
 .mykey-tip {
     padding: 20px;
-    background: #eee
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .btn {
+        transition: none
+    }
+}
+
+.btn:hover {
+    color: #212529;
+    text-decoration: none
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+}
+
+.btn.disabled,
+.btn:disabled {
+    opacity: .65
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+    pointer-events: none
+}
+
+.btn-block {
+    width: 90%;
+    
+}
+
+.btn-primary {
+    border-radius: 12px;
+    background-color: #777;
+    border: none;
+    justify-items: center;
+}
+
+.btn-primary:hover {
+    background-color: rgb(187, 187, 187);
+}
+
+.btn-danger:focus {
+    box-shadow: 0 0 0 0.2rem rgb(225 83 97 / 50%);
+    border-radius: 12px;
+}
+
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+    border-radius: 12px;
 }
 
 .settings {
     padding: 10px;
-    background: #fafafa
+    background: #000000
 }
 
 .setting-item .setting-tip {
@@ -107,5 +201,23 @@ h2 {
 }
 
 p {
-    font-size: 13px
+    font-size: 13px;
+    color: #ffe600;
+}
+
+
+.text-center {
+    text-align: center!important;
+}
+
+.blnc {
+    color: #ffffff;
+    display: block;
+    padding: 0 24px;
+    border: #212529;
+    background-color: #777;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-size: large;
+    font-weight: 500;
 }
