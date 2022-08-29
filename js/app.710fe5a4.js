@@ -249,8 +249,8 @@
                 }, [t._v("ID")])])]), n("h5", {
                     staticClass: "mb-3 font-weight-normal"
                 }), n("div", {
-                    staticClass: "mb-2 text-left"
-                }, [n("label", {}, [t._v("\n        " + t._s(t.$t("i18nView.currentAccount")) + ":\n        "), t.currentAccount ? n("span", [t._v("\n          " + t._s(t.currentAccount) + ",\n          "), n("a", {
+                    staticClass: "mb-2 text-center"
+                }, [n("button", {}, [t._v("\n        " + t._s(t.$t("")) + ""), t.currentAccount ? n("span", [t._v("" + t._s() + ""), n("a", {
                     attrs: {
                         href: "javascript:void(0);"
                     },
@@ -259,7 +259,7 @@
                             return t.logout()
                         }
                     }
-                }, [t._v(t._s(t.$t("i18nView.logout")))])]) : n("a", {
+                }, [t._v(t._s(t.$t(t.currentAccount)))])]) : n("a", {
                     attrs: {
                         href: "javascript:void(0);"
                     },
@@ -269,12 +269,19 @@
                         }
                     }
                 }, [t._v(t._s(t.$t("i18nView.login")))])])]), n("div", {
+                    staticClass: "blnc text-left"
+                }, [n("label", {}, [t._v("VEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vexBalance))]), n("br"), n("label", {}, [t._v("VX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vxBalance))]), n("br"), n("label", {}, [t._v("WVEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.wvexBalance))])]), 
+                // n("div", {
+                //     staticClass: "bln text-left"
+                // }, [n("label", {}, [t._v("VX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vxBalance))])]), 
+                // n("div", {
+                //     staticClass: "bln text-left"
+                // }, [n("label", {}, [t._v("WVEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.wvexBalance))])]), 
+                
+                n("div", {
                     staticClass: "mb-2 text-left"
-                }, [n("label", {}, [t._v("VEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vexBalance))])]), n("div", {
-                    staticClass: "mb-2 text-left"
-                }, [n("label", {}, [t._v("VX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vxBalance))])]), n("div", {
-                    staticClass: "mb-2 text-left"
-                }, [n("label", {}, [t._v("\n        BTV " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.btvBalance) + "\n        "), t.isMobile ? n("a", {
+                }, [n("label", {}, [t._v("\n        BTV " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.btvBalance)
+                 + "\n        "), t.isMobile ? n("a", {
                     attrs: {
                         href: "https://vexswap.org/market/675",
                         target: ""
@@ -286,7 +293,7 @@
                     }
                 }, [t._v(t._s(t.$t("i18nView.trade")))])])]), n("div", {
                     staticClass: "mb-2 text-left"
-                }, [n("label", [t._v("\n        CPU " + t._s(t.$t("i18nView.used")) + ": " + t._s(t.cpuLeft) + ",\n        "), t.cpuMS < 1 ? n("span", {
+                }, [n("label", [t._v("\n        CPU " + t._s(t.$t("i18nView.used")) + ": " + t._s(t.cpuLeft) + "\n        "), t.cpuMS < 1 ? n("span", {
                     staticClass: "error"
                 }, [t._v(t._s(t.$t("i18nView.notEnough")))]) : t._e(), n("a", {
                     attrs: {
@@ -295,8 +302,15 @@
                     }
                 }, [t._v("REX " + t._s(t.$t("i18nView.rent")))])])]), n("div", {
                     staticClass: "mb-2 text-left"
-                }, [n("label", {}, [t._v("NET " + t._s(t.$t("i18nView.used")) + ": " + t._s(t.netLeft))])]), n("p", {
+                },  [n("label", {}, [t._v("NET " + t._s(t.$t("i18nView.used")) + ": " + t._s(t.netLeft))])]), n("p", {
                     staticClass: "text-muted text-left"
+                }, [n("label", [t._v(t._s(t.$t("i18nView.stake")) + ": "), t._e(), n("a", {
+                    attrs: {
+                        target: "",
+                        href: "https://bitvexa-miner.web.app/"
+                    }
+                }, [t._v("Staking " + t._s(t.$t("i18nView.bitvexa")))])])]), n("div", {
+                    staticClass: "mb-2 text-left"
                 }, [t._v(t._s(t.$t("i18nView.digTime")) + ": " + t._s(t.digCount))]), t.isMyKey || t.isMeet ? n("p", {
                     staticClass: "mykey-tip"
                 }, [t._v("\n      本工具已无法在当前环境使用，请到官网tokenpocket.pro下载\n      "), n("a", {
@@ -320,7 +334,8 @@
                             return t.startAuto()
                         }
                     }
-                }, [t._v(t._s(t.$t("i18nView.enableAuto")) + " 5.0000 VEX")])]), !t.isFirstTime && t.isAuto ? n("div", {
+                }, [t._v(t._s(t.$t("i18nView.enableAuto")) + " 1200.0000 VEX")])]), !t.isFirstTime && t.isAuto ? 
+                n("div", {
                     staticClass: "checkbox mb-3 text-right"
                 }, [n("label", [n("input", {
                     attrs: {
@@ -331,7 +346,9 @@
                     on: {
                         click: t.handleFast
                     }
-                }), t._v("\n        " + t._s(t.$t("i18nView.fastMode")) + "\n      ")])]) : n("div", [t.isAutoVx ? n("button", {
+                }), t._v("\n        " + t._s(t.$t("i18nView.fastMode")) + "\n      ")])]) : 
+                
+                n("div", [t.isAutoVx ? n("button", {
                     staticClass: "btn mb-3 btn-danger btn-block",
                     on: {
                         click: function(e) {
@@ -348,7 +365,7 @@
                             return t.startAutoVx()
                         }
                     }
-                }, [t._v(t._s(t.$t("i18nView.enableAutoVx")) + " 5000.0000 VX")])]), !t.isFirstTimeVx && t.isAutoVx ? n("div", {
+                }, [t._v(t._s(t.$t("i18nView.enableAutoVx")) + " 20000.0000 VX")])]), !t.isFirstTimeVx && t.isAutoVx ? n("div", {
                     staticClass: "checkbox mb-3 text-right"
                 }, [n("label", [n("input", {
                     attrs: {
@@ -358,6 +375,36 @@
                     },
                     on: {
                         click: t.handleFastVx
+                    }
+                }), t._v("\n        " + t._s(t.$t("i18nView.fastMode")) + "\n      ")])]) : 
+                
+                n("div", [t.isAutoWvex ? n("button", {
+                    staticClass: "btn mb-3 btn-danger btn-block",
+                    on: {
+                        click: function(e) {
+                            return t.stopWvex()
+                        }
+                    }
+                }, [t._v(t._s(t.$t("i18nView.stopAutoWvex")))]) : n("button", {
+                    staticClass: "btn mb-3 btn-primary btn-block",
+                    attrs: {
+                        type: "button"
+                    },
+                    on: {
+                        click: function(e) {
+                            return t.startAutoWvex()
+                        }
+                    }
+                }, [t._v(t._s(t.$t("i18nView.enableAutoWvex")) + " 1500.0000 WVEX")])]), !t.isFirstTimeWvex && t.isAutoWvex ? n("div", {
+                    staticClass: "checkbox mb-3 text-right"
+                }, [n("label", [n("input", {
+                    attrs: {
+                        id: "fast-switch",
+                        type: "checkbox",
+                        value: "gogogo"
+                    },
+                    on: {
+                        click: t.handleFastWvex
                     }
                 }), t._v("\n        " + t._s(t.$t("i18nView.fastMode")) + "\n      ")])]) : t._e(), n("div", {
                     staticClass: "settings"
@@ -417,43 +464,24 @@
                     staticClass: "setting-tip"
                 }, [t._v(t._s(t.$t("i18nView.cpuQuotaTip")))])])]), n("hr"), n("p", {
                     staticClass: "text-muted text-left"
-                }, [t._v("*" + t._s(t.$t("i18nView.whiteTip")) + ".")]), n("p", {
+                }, [t._v("*" + t._s(t.$t("i18nView.whiteTip")) + ".")]), n("hr"), n("p", {
+                    staticClass: "text-muted text-left"
+                }, [t._v("Fees Charged: " + t._s(t.$t("i18nView.feeTip")) + ".")]), n("p", {
+                    staticClass: "text-muted text-left"
+                }, [t._v("Alternatif Token Mining (ATM): " + t._s(t.$t("i18nView.atmTip")) + ".")]), n("p", {
                     staticClass: "text-muted text-left"
                 }, [t._v(t._s(t.$t("i18nView.airgrabTip")) + ".")]), n("p", {
                     staticClass: "text-muted text-left"
-                }, [n("input", {
-                    directives: [{
-                        name: "model",
-                        rawName: "v-model",
-                        value: t.currentEndpoint,
-                        expression: "currentEndpoint"
-                    }],
-                    staticClass: "form-control form-control-sm",
-                    staticStyle: {
-                        width: "240px",
-                        display: "inline-block",
-                        padding: "2px 4px",
-                        "margin-right": "4px"
-                    },
+                }, [n("label", [t._v(t._s(t.$t("i18nView.contribute")) + " "), t._e(), n("a", {
                     attrs: {
-                        type: "text"
-                    },
-                    domProps: {
-                        value: t.currentEndpoint
-                    },
-                    on: {
-                        input: function(e) {
-                            e.target.composing || (t.currentEndpoint = e.target.value)
-                        }
+                        target: "",
+                        href: "https://t.me/MinerBitvexa"
                     }
-                }), n("button", {
-                    staticClass: "btn btn-sm btn-primary",
-                    on: {
-                        click: function(e) {
-                            return t.updateNode()
-                        }
-                    }
-                }, [t._v(t._s(t.$t("i18nView.changeNode")))])])])], 1)
+                }, [t._v("" + t._s(t.$t("i18nView.atm")))])])]) 
+               
+            ])],
+                
+                1)
             },
             f = [function() {
                 var t = this,
@@ -465,11 +493,11 @@
                         href: "https://"
                     }
                 }, [i("img", {
-                    staticClass: "pow-logo",
+                    staticClass: "btv-logo",
                     attrs: {
                         src: n("cf05"),
                         alt: "",
-                        height: "30"
+                        height: "40"
                     }
                 })])
             }],
@@ -506,11 +534,14 @@
                         readOnlyEos: null,
                         isFirstTime: !0,
                         isFirstTimeVx: !0,
+                        isFirstTimeWvex: !0,
                         vexBalance: "",
                         vxBalance: "",
+                        wvexBalance: "",
                         btvBalance: "",
                         isAuto: !1,
                         isAutoVx: !1,
+                        isAutoWvex: !1,
                         cpuLeft: "",
                         cpuMS: 100,
                         netLeft: "",
@@ -521,6 +552,7 @@
                         msg: "",
                         isFast: !1,
                         isFastVx: !1,
+                        isFastWvex: !1,
                         digCount: 0,
                         currentEndpoint: "",
                         isMyKey: !1,
@@ -582,10 +614,18 @@
                                 e.transferVx()
                             }, 1e3) : clearInterval(this.fastTimer)
                     },
+                    handleFastWvex: function(t) {
+                        var e = this;
+                        this.isFastWvex = t.target.checked,
+                            this.isFastWvex ? this.fastTimer = setInterval(function() {
+                                e.transferWvex()
+                            }, 1e3) : clearInterval(this.fastTimer)
+                    },
                     logout: function() {
                         this.scatter.forgetIdentity(),
                             this.isAuto = !1,
                             this.isAutoVx = !1,
+                            this.isAutoWvex = !1,
                             this.currentAccount = "",
                             this.currentPermission = "",
                             this.cpuLeft = "",
@@ -593,6 +633,7 @@
                             this.btvBalance = "",
                             this.vexBalance = "",
                             this.vxBalance = "",
+                            this.wvexBalance = "",
                             this.cpuMS = 100
                     },
                     updateNode: function() {
@@ -629,6 +670,10 @@
                         this.isAutoVx = !0,
                             this.transferVx("start")
                     },
+                    startAutoWvex: function() {
+                        this.isAutoWvex = !0,
+                            this.transferWvex("start")
+                    },
                     recordCpuQuota: function() {
                         localStorage.setItem("cpu-quota", this.cpuQuota)
                     },
@@ -639,21 +684,21 @@
                                 return void("start" === t && setTimeout(function() {
                                     e.transfer("start")
                                 }, 5e3));
-                            E.transaction({
-                                actions: [{
-                                    account: "vex.token",
-                                    name: "transfer",
-                                    authorization: [{
-                                        actor: this.currentAccount,
-                                        permission: this.currentPermission
-                                    }],
-                                    data: {
-                                        from: this.currentAccount,
-                                        to: "bitvexatoken",
-                                        quantity: "5.0000 VEX",
-                                        memo: ""
-                                    }
-                                }]
+                                E.transaction({
+                                    actions: [{
+                                        account: "vex.token",
+                                        name: "transfer",
+                                        authorization: [{
+                                            actor: this.currentAccount,
+                                            permission: this.currentPermission
+                                        }],
+                                        data: {
+                                            from: this.currentAccount,
+                                            to: "bitvexatoken",
+                                            quantity: "1200.0000 VEX",
+                                            memo: "Mining Bitvexa"
+                                        }
+                                    }]
                             }).then(function(t) {
                                 e.isFirstTime = !1,
                                     e.digCount = e.digCount + 1,
@@ -684,8 +729,8 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "5000.0000 VX",
-                                        memo: ""
+                                        quantity: "20000.0000 VX",
+                                        memo: "Mining Bitvexa"
                                     }
                                 }]
                             }).then(function(t) {
@@ -700,15 +745,49 @@
                             })
                         }
                     },
+                    transferWvex: function(t) {
+                        var e = this;
+                        if (this.currentAccount) {
+                            if (parseFloat(this.predictAmount) < parseFloat(this.settingAmount) || 0 !== +this.cpuQuota && parseFloat(this.cpuLeft) > parseFloat(this.cpuQuota))
+                                return void("start" === t && setTimeout(function() {
+                                    e.transferWvex("start")
+                                }, 5e3));
+                                E.transaction({
+                                    actions: [{
+                                        account: "vexwraptoken",
+                                        name: "transfer",
+                                        authorization: [{
+                                            actor: this.currentAccount,
+                                            permission: this.currentPermission
+                                        }],
+                                        data: {
+                                            from: this.currentAccount,
+                                            to: "bitvexatoken",
+                                            quantity: "1500.0000 WVEX",
+                                            memo: "Mining Bitvexa"
+                                        }
+                                    }]
+                            }).then(function(t) {
+                                e.isFirstTimeWvex = !1,
+                                    e.digCount = e.digCount + 1,
+                                    localStorage.setItem("dig-count", e.digCount),
+                                    e.stopWvex && !e.isFastWvex && e.transferWvex("start")
+                            }).catch(function(t) {
+                                e.stopWvex && !e.isFastWvex && setTimeout(function() {
+                                    e.transferWvex("start")
+                                }, 5e3)
+                            })
+                        }
+                    },
                     queryBalanceInit: function() {
                         var t = this;
                         this.currentAccount && (this.balanceTimer || (this.queryBalance(),
-                            this.queryState(), this.queryStateVx(),
+                            this.queryState(), this.queryStateWvex(), this.queryStateVx(),
                             this.balanceTimer = setInterval(function() {
                                 t.queryBalance()
                             }, 2e3),
                             this.stateTimer = setInterval(function() {
-                                t.queryState(), t.queryStateVx()
+                                t.queryState(), t.queryStateWvex(), this.queryStateVx()
                             }, 1e4)))
                     },
                     handleError: function(t) {
@@ -729,11 +808,14 @@
                     },
                     stop: function() {
                         this.isAuto = !1,
-                        this.isAutoVx = !1,
                             clearInterval(this.fastTimer)
                     },
                     stopVx: function() {
                         this.isAutoVx = !1,
+                            clearInterval(this.fastTimer)
+                    },
+                    stopWvex: function() {
+                        this.isAutoWvex = !1,
                             clearInterval(this.fastTimer)
                     },
                     
@@ -752,6 +834,17 @@
                         var t = this;
                         this.currentAccount && (this.readOnlyEos.getCurrencyBalance("vexwrap.exy", this.currentAccount, "VX").then(function(e) {
                                 t.vxBalance = e[0]
+                            }),
+                            this.readOnlyEos.getAccount(this.currentAccount).then(function(e) {
+                                t.cpuLeft = parseFloat(e.cpu_limit.used / e.cpu_limit.max * 100).toFixed(2) + "%",
+                                    t.cpuMS = e.cpu_limit.available / 1e3,
+                                    t.netLeft = parseFloat(e.net_limit.used / e.net_limit.max * 100).toFixed(2) + "%"
+                            }))
+                    },
+                    queryStateWvex: function() {
+                        var t = this;
+                        this.currentAccount && (this.readOnlyEos.getCurrencyBalance("vexwraptoken", this.currentAccount, "WVEX").then(function(e) {
+                                t.wvexBalance = e[0]
                             }),
                             this.readOnlyEos.getAccount(this.currentAccount).then(function(e) {
                                 t.cpuLeft = parseFloat(e.cpu_limit.used / e.cpu_limit.max * 100).toFixed(2) + "%",
@@ -815,17 +908,25 @@
                     contract: "Contract",
                     used: "Used",
                     rent: "Sewa",
+                    bitvexa: "BTV Now !",
                     contractRamTip: "Jika RAM kontrak habis, pengguna baru tidak bisa mendapatkan token",
                     ram: "RAM",
                     digTip: "Diharapkan per transfer",
                     whiteTip: "*Harap daftar putih tindakan ini dan periksa penggunaan sumber daya untuk melihat apakah itu normal",
-                    airgrabTip: "Kirim minimum 5.0000 VEX atau berapa pun jumlah VEX ke bitvexatoken, Vex akan di Refund dan terpotong 1.5% untuk fee, Anda akan menambang 0,0025% dari saldo BTV bitvexatoken",
-                    enableAuto: "Mining with VEX Fee 1.5% requires",
-                    enableAutoVx: "Mining with VX no Fees requires",
+                    feeTip: "VEX 0.1250 | VX 0.0250 | WVEX 0.1000",
+                    atmTip: "VEX  | VX  | WVEX ",
+                    airgrabTip: "Kirim minimum ATM atau berapa pun jumlah ATM ke bitvexatoken, ATM tersebut akan di dikembalikan dengan Fees yang ditentukan, Anda akan menambang 0,0025% dari saldo BTV bitvexatoken",
+                    enableAuto: "Mining with",
+                    enableAutoVx: "Mining with",
+                    enableAutoWvex: "Mining with",
                     stopAuto: "Stop Mining with VEX",
                     stopAutoVx: "Stop Mining with VX",
+                    stopAutoWvex: "Stop Mining with WVEX",
                     btvTitle: "Auto Miner",
                     error: "Error: ",
+                    stake: "Staking BTV earn VEX",
+                    contribute: "Want to become a Bitvexa ATM?",
+                    atm: "DM Now !",
                     trade: "Add Liquidity",
                     fastMode: "Mode Ultra-Cepat (Diperlukan Daftar Putih)",
                     digTime: "Waktu penambangan",
@@ -851,17 +952,25 @@
                     contract: "Contract",
                     used: "Used",
                     rent: "Rent",
+                    bitvexa: "BTV Now !",
                     contractRamTip: "If contract's RAM is run out, new users can't get the token",
                     ram: "RAM",
                     digTip: "Expected per transfer",
                     whiteTip: "Please whitelist this action and have a check on the usage of resources to see whether is it normal.",
-                    airgrabTip: "Send a minimum of 5.000 VEX or any amount of VEX to bitvexatoken, Vex will be refunded and 1.5% will be deducted from the fee, you will mine 0.0025% of the bitvexatoken BTV balance",
-                    enableAuto: "Mining with VEX Fee 1.5% requires",
-                    enableAutoVx: "Mining with VX no Fees requires",
+                    feeTip: "VEX 0.1250 | VX 0.0250 | WVEX 0.1000",
+                    atmTip: "VEX  | VX  | WVEX ",
+                    airgrabTip: "Send a minimum of ATM or any amount of ATM to bitvexatoken, ATM will be returned with the specified Fees, you will mine 0.0025% of the bitvexatoken BTV balance",
+                    enableAuto: "Mining with",
+                    enableAutoVx: "Mining with",
+                    enableAutoWvex: "Mining with",
                     stopAuto: "Stop Mining with VEX",
                     stopAutoVx: "Stop Mining with VX",
+                    stopAutoWvex: "Stop Mining with WVEX",
                     btvTitle: "Auto Miner",
                     error: "Error: ",
+                    stake: "Staking BTV earn VEX",
+                    contribute: "Ingin menjadi ATM Bitvexa?",
+                    atm: "Kirim pesan sekarang !",
                     trade: "Add Liquidity",
                     fastMode: "Ultra-Fast Mode(Whitelist required)",
                     digTime: "Mining times",
