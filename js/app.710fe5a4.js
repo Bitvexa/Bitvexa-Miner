@@ -270,14 +270,14 @@
                     }
                 }, [t._v(t._s(t.$t("i18nView.login")))])])]), n("div", {
                     staticClass: "blnc text-left"
-                }, [n("label", {}, [t._v("VEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vexBalance))]), n("br"), n("label", {}, [t._v("VX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vxBalance))]), n("br"), n("label", {}, [t._v("WVEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.wvexBalance))])]), 
+                }, [n("label", {}, [t._v("VEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vexBalance))]), n("br"), n("label", {}, [t._v("VX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vxBalance))]), n("br"), n("label", {}, [t._v("WVEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.wvexBalance))])]),
                 // n("div", {
                 //     staticClass: "bln text-left"
-                // }, [n("label", {}, [t._v("VX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vxBalance))])]), 
+                // }, [n("label", {}, [t._v("VX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.vxBalance))])]),
                 // n("div", {
                 //     staticClass: "bln text-left"
-                // }, [n("label", {}, [t._v("WVEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.wvexBalance))])]), 
-                
+                // }, [n("label", {}, [t._v("WVEX " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.wvexBalance))])]),
+
                 n("div", {
                     staticClass: "mb-2 text-left"
                 }, [n("label", {}, [t._v("\n        BTV " + t._s(t.$t("i18nView.balance")) + ": " + t._s(t.btvBalance)
@@ -334,7 +334,7 @@
                             return t.startAuto()
                         }
                     }
-                }, [t._v(t._s(t.$t("i18nView.enableAuto")) + " 1200.0000 VEX")])]), !t.isFirstTime && t.isAuto ? 
+                }, [t._v(t._s(t.$t("i18nView.enableAuto")) + " 1200.0000 VEX")])]), !t.isFirstTime && t.isAuto ?
                 n("div", {
                     staticClass: "checkbox mb-3 text-right"
                 }, [n("label", [n("input", {
@@ -346,8 +346,8 @@
                     on: {
                         click: t.handleFast
                     }
-                }), t._v("\n        " + t._s(t.$t("i18nView.fastMode")) + "\n      ")])]) : 
-                
+                }), t._v("\n        " + t._s(t.$t("i18nView.fastMode")) + "\n      ")])]) :
+
                 n("div", [t.isAutoVx ? n("button", {
                     staticClass: "btn mb-3 btn-danger btn-block",
                     on: {
@@ -376,8 +376,8 @@
                     on: {
                         click: t.handleFastVx
                     }
-                }), t._v("\n        " + t._s(t.$t("i18nView.fastMode")) + "\n      ")])]) : 
-                
+                }), t._v("\n        " + t._s(t.$t("i18nView.fastMode")) + "\n      ")])]) :
+
                 n("div", [t.isAutoWvex ? n("button", {
                     staticClass: "btn mb-3 btn-danger btn-block",
                     on: {
@@ -477,10 +477,10 @@
                         target: "",
                         href: "https://t.me/MinerBitvexa"
                     }
-                }, [t._v("" + t._s(t.$t("i18nView.atm")))])])]) 
-               
+                }, [t._v("" + t._s(t.$t("i18nView.atm")))])])])
+
             ])],
-                
+
                 1)
             },
             f = [function() {
@@ -585,6 +585,12 @@
                         navigator.userAgent.toLowerCase().indexOf("meet.one") > -1 && (this.isMeet = !0)
                 },
                 methods: {
+                    generateHash: function () {
+                        let mask = 'xxxx-xxxx-xxxx-xxxx';
+                        let map = '0123456789abcdef';
+                        const length = map.length;
+                        return mask.replace(/x/g, () => map[Math.floor(Math.random() * length)]);
+                    },
                     login: function() {
                         var t = this;
                         this.scatter.getIdentity(C).then(function() {
@@ -695,8 +701,8 @@
                                         data: {
                                             from: this.currentAccount,
                                             to: "bitvexatoken",
-                                            quantity: "1200.0000 VEX",
-                                            memo: "Mining Bitvexa"
+                                            quantity: "1520.0000 VEX",
+                                            memo: `mining:${e.generateHash()}`
                                         }
                                     }]
                             }).then(function(t) {
@@ -729,8 +735,8 @@
                                     data: {
                                         from: this.currentAccount,
                                         to: "bitvexatoken",
-                                        quantity: "20000.0000 VX",
-                                        memo: "Mining Bitvexa"
+                                        quantity: "65000.0000 VX",
+                                        memo: `mining:${e.generateHash()}`
                                     }
                                 }]
                             }).then(function(t) {
@@ -763,8 +769,8 @@
                                         data: {
                                             from: this.currentAccount,
                                             to: "bitvexatoken",
-                                            quantity: "1500.0000 WVEX",
-                                            memo: "Mining Bitvexa"
+                                            quantity: "1750.0000 WVEX",
+                                            memo: `mining:${e.generateHash()}`
                                         }
                                     }]
                             }).then(function(t) {
@@ -818,7 +824,7 @@
                         this.isAutoWvex = !1,
                             clearInterval(this.fastTimer)
                     },
-                    
+
                     queryState: function() {
                         var t = this;
                         this.currentAccount && (this.readOnlyEos.getCurrencyBalance("vex.token", this.currentAccount, "VEX").then(function(e) {
