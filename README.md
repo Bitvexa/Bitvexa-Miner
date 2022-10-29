@@ -17,9 +17,11 @@ Gunakan Resource CHIP/CPU Anda sebagai penambang cryptocurrency blockchain selam
 
 [1] BITVEXA. Anda dapat mendukung pengembangan BTV lebih lanjut dengan mendonasikan BTV | VEX | BTC ke Bitvexa. Sumbangan untuk Bitvexa menghargai upaya tim dan mendorong pengembangan baru sambil menjaga distribusi BTV tetap adil, terdesentralisasi, dan sesuai dengan semangat Bitcoin.
 
-Kirim donasi VEX dan BTV ke alamat wallet ###bitvexa
+Kirim donasi VEX dan BTV ke 
+###bitvexa
 
-Kirim donasi BTC ke 3PLkYcCv6p9coHjxAsKwNhWUxUw61P6Uka
+Kirim donasi BTC ke 
+###3PLkYcCv6p9coHjxAsKwNhWUxUw61P6Uka
 
 [2] https://bitcoin.org/bitcoin.pdf
 
