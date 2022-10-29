@@ -14,6 +14,8 @@ Proof of Work (PoW) bekerja dengan Vexanium Blockchain. Penambangan BTV di Vexan
 
 Gunakan Resource Anda sebagai penambang cryptocurrency blockchain selamanya. Resource tidak memerlukan daya atau peningkatan untuk tetap kompetitif melawan penambang lain di Vexanium Blockchain. Inflasi di Resource adalah biaya perawatan, listrik, dan peningkatan Anda. Gunakan Resource Anda secara maksimal alih-alih membiarkannya sia-sia.
 
+Tim pengembangan di belakang BTV juga perlu menambang BTV jika mereka menginginkannya. 
+
 Untuk informasi lebih lanjut, silakan bergabung dengan komunitas di telegram https://t.me/bitvexa
 
 [1] BITVEXA. Anda dapat mendukung pengembangan BTV lebih lanjut dengan mendonasikan BTV | VEX | BTC ke Bitvexa. Sumbangan untuk Bitvexa menghargai upaya tim dan mendorong pengembangan baru sambil menjaga distribusi BTV tetap adil, terdesentralisasi, dan sesuai dengan semangat Bitcoin.
